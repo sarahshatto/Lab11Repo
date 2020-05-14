@@ -27,26 +27,26 @@ BusMallImage.prototype.render = function(){
   parentElement.appendChild(imageElement);
 };
 
-new BusMallImage('bag', '.jpg');
-new BusMallImage('banana', '.jpg');
-new BusMallImage('bathroom', '.jpg');
-new BusMallImage('boots', '.jpg');
-new BusMallImage('breakfast', '.jpg');
-new BusMallImage('bubblegum', '.jpg');
-new BusMallImage('chair', '.jpg');
-new BusMallImage('cthulhu', '.jpg');
-new BusMallImage('dog-duck', '.jpg');
-new BusMallImage('dragon', '.jpg');
-new BusMallImage('pen', '.jpg');
-new BusMallImage('pet-sweep', '.jpg');
-new BusMallImage('scissors', '.jpg');
-new BusMallImage('shark', '.jpg');
-new BusMallImage('sweep', '.png');
-new BusMallImage('tauntaun', '.jpg');
-new BusMallImage('unicorn', '.jpg');
-new BusMallImage('usb', '.gif');
-new BusMallImage('water-can', '.jpg');
-new BusMallImage('wine-glass', '.jpg');
+// new BusMallImage('bag', '.jpg');
+// new BusMallImage('banana', '.jpg');
+// new BusMallImage('bathroom', '.jpg');
+// new BusMallImage('boots', '.jpg');
+// new BusMallImage('breakfast', '.jpg');
+// new BusMallImage('bubblegum', '.jpg');
+// new BusMallImage('chair', '.jpg');
+// new BusMallImage('cthulhu', '.jpg');
+// new BusMallImage('dog-duck', '.jpg');
+// new BusMallImage('dragon', '.jpg');
+// new BusMallImage('pen', '.jpg');
+// new BusMallImage('pet-sweep', '.jpg');
+// new BusMallImage('scissors', '.jpg');
+// new BusMallImage('shark', '.jpg');
+// new BusMallImage('sweep', '.png');
+// new BusMallImage('tauntaun', '.jpg');
+// new BusMallImage('unicorn', '.jpg');
+// new BusMallImage('usb', '.gif');
+// new BusMallImage('water-can', '.jpg');
+// new BusMallImage('wine-glass', '.jpg');
 
 ////////////////
 
