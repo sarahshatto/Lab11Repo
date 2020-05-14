@@ -10,6 +10,7 @@ var votes = [];
 
 function BusMallImage(name, extension){
   this.filepath = `images/${name}${extension}`;
+  this.extension = extension;
   this.alt = name;
   this.title = name;
   this.votes = 0;
@@ -47,6 +48,46 @@ new BusMallImage('usb', '.gif');
 new BusMallImage('water-can', '.jpg');
 new BusMallImage('wine-glass', '.jpg');
 
+////////////////
+
+var imagesFromLocalStorage = localStorage.getItem('images');
+console.log('this is my images from Local Storage', imagesFromLocalStorage);
+
+var imagesTurnedBackIntoJavaScript = JSON.parse(imagesFromLocalStorage);
+console.log('my parsed images', imagesTurnedBackIntoJavaScript);
+
+if(imagesTurnedBackIntoJavaScript !== null) {
+  for(var i = 0; i < imagesTurnedBackIntoJavaScript.length; i++) {
+    var newImage = new BusMallImage(imagesTurnedBackIntoJavaScript[i].title, imagesTurnedBackIntoJavaScript[i].extension);
+    newImage.votes = imagesTurnedBackIntoJavaScript[i].votes;
+    newImage.views = imagesTurnedBackIntoJavaScript[i].views;
+  }
+}
+else {
+  new BusMallImage('bag', '.jpg');
+  new BusMallImage('banana', '.jpg');
+  new BusMallImage('bathroom', '.jpg');
+  new BusMallImage('boots', '.jpg');
+  new BusMallImage('breakfast', '.jpg');
+  new BusMallImage('bubblegum', '.jpg');
+  new BusMallImage('chair', '.jpg');
+  new BusMallImage('cthulhu', '.jpg');
+  new BusMallImage('dog-duck', '.jpg');
+  new BusMallImage('dragon', '.jpg');
+  new BusMallImage('pen', '.jpg');
+  new BusMallImage('pet-sweep', '.jpg');
+  new BusMallImage('scissors', '.jpg');
+  new BusMallImage('shark', '.jpg');
+  new BusMallImage('sweep', '.png');
+  new BusMallImage('tauntaun', '.jpg');
+  new BusMallImage('unicorn', '.jpg');
+  new BusMallImage('usb', '.gif');
+  new BusMallImage('water-can', '.jpg');
+  new BusMallImage('wine-glass', '.jpg');
+}
+
+
+////////////
 
 function getRandomIndex(){
 
@@ -99,6 +140,12 @@ function handleClick(event){
   displayImage();
   displayImage();
   displayImage();
+
+  var stringifiedImages = JSON.stringify(allBusMall);
+  console.log('this is the JSON for the all images array', stringifiedImages);
+
+  localStorage.setItem('images', stringifiedImages);
+
 }
 
 displayImage();
@@ -154,4 +201,3 @@ function generateChart(){
     }
   });
 }
-
